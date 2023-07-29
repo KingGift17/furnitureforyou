@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import "./App.scss";
 import Homepage from "./pages/Homepage";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import ProductDetails from "./pages/ProductDetails";
