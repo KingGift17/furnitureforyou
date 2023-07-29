@@ -5,8 +5,25 @@ import userIcon from "../assets/images/user-icon.png";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import MenuIcon from "@mui/icons-material/Menu";
+import { motion } from "framer-motion";
+
 import { Container, Row } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
+const navLink = [
+  {
+    path: "/home",
+    display: "Home",
+  },
+  {
+    path: "/shop",
+    display: "Shop",
+  },
+  {
+    path: "/cart",
+    display: "Cart",
+  },
+];
 
 const Header = () => {
   return (
@@ -23,27 +40,36 @@ const Header = () => {
 
             <div className="navbar">
               <ul className="menu">
-                <li className="nav-item">
-                  <Link to="/home">Home</Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/shop">Shop</Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/cart">Cart</Link>
-                </li>
+                {navLink.map((item, index) => (
+                  <li className="nav-item" key={index}>
+                    <NavLink
+                      to={item.path}
+                      className={(navClass) =>
+                        navClass.isActive ? "nav-active" : ""
+                      }
+                    >
+                      {item.display}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="nav-icons">
-              <span className="fav_icon">
+              <span className="fav-icon">
                 <FavoriteIcon />
+                <div className="badgeCounter">1</div>
               </span>
               <span className="cart-icon">
                 <ShoppingBasketIcon />
+                <div className="badgeCounter">1</div>
               </span>
               <span>
-                <img src={userIcon} alt="image" />
+                <motion.img
+                  whileTap={{ scale: 1.2 }}
+                  src={userIcon}
+                  alt="image"
+                />
               </span>
             </div>
 

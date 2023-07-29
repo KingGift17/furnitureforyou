@@ -9,3 +9,4 @@
 @mui/material
 @emotion/styled
 @emotion/react
+@framer motion
