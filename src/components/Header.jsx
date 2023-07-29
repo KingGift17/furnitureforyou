@@ -18,29 +18,28 @@ const Header = () => {
               <img src={logo} />
               <div>
                 <h1>GiftKart</h1>
-                <p>Been in Supply and Demand since 2023</p>
               </div>
             </div>
 
             <div className="navbar">
               <ul className="menu">
-                <li className="nav_item">
+                <li className="nav-item">
                   <Link to="/home">Home</Link>
                 </li>
-                <li className="nav_item">
+                <li className="nav-item">
                   <Link to="/shop">Shop</Link>
                 </li>
-                <li className="nav_item">
+                <li className="nav-item">
                   <Link to="/cart">Cart</Link>
                 </li>
               </ul>
             </div>
 
-            <div className="nav_icons">
+            <div className="nav-icons">
               <span className="fav_icon">
                 <FavoriteIcon />
               </span>
-              <span className="cart_icon">
+              <span className="cart-icon">
                 <ShoppingBasketIcon />
               </span>
               <span>
