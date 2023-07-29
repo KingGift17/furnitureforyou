@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/components/header.scss";
-import CloudIcon from "@mui/icons-material/Cloud";
+import logo from "../assets/images/eco-logo-2.png";
 import userIcon from "../assets/images/user-icon.png";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -15,7 +15,7 @@ const Header = () => {
         <Row>
           <div className="nav-wrapper">
             <div className="logo">
-              <CloudIcon />
+              <img src={logo} />
               <div>
                 <h1>GiftKart</h1>
                 <p>Been in Supply and Demand since 2023</p>
