@@ -35,7 +35,7 @@
     column-gap: 2.7rem;
     margin-bottom: 0;
   
-    .nav-item {
+    .nav-item a {
       position: relative;
       color: var(--primary-color);
       font-weight: 500;
@@ -45,7 +45,7 @@
       &:before {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: -10px;
         left: 0;
         width: 100%;
         height: 2px;
@@ -55,8 +55,8 @@
         transition: transform 0.3s ease-in-out;
       }
   
-      &:hover:before,
-      &.nav-active:before {
+      &:hover:before {
+        padding-bottom: 5%;
         transform: scaleX(1);
       }
     }
@@ -79,7 +79,7 @@
     z-index: 10;
     width: 15px;
     height: 15px;
-    transform: translate(40%, -20%);
+    transform: translate(40%, 20%);
     line-height: 12px;
     display: flex;
     align-items: center;

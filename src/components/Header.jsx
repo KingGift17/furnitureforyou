@@ -60,10 +60,12 @@ const Header = () => {
                 <FavoriteIcon />
                 <div className="badgeCounter">1</div>
               </span>
-              <span className="cart-icon">
-                <ShoppingBasketIcon />
-                <div className="badgeCounter">1</div>
-              </span>
+              <motion.span whileTap={{ rotate: 15 }}>
+                <span className="cart-icon">
+                  <ShoppingBasketIcon />
+                  <div className="badgeCounter">1</div>
+                </span>
+              </motion.span>
               <span>
                 <motion.img
                   whileTap={{ scale: 1.2 }}
