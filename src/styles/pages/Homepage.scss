@@ -1,5 +1,10 @@
 .hero-section{
     background: var(--hero-bg);
+}
+
+
+.hero-content{
+    padding-top: 45px;
 
     h2{
         color: var(--primary-color);
@@ -46,4 +51,5 @@
         text-decoration: none;
     }
   }
+
 
