@@ -42,6 +42,15 @@ const Homepage = () => {
         </Container>
       </section>
       <Services />
+      <section className="trending-products">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center">
+              <h2 className="section-title">Trending Product</h2>
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </Helmet>
   );
 };

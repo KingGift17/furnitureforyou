@@ -11,7 +11,10 @@ const Services = () => {
         <Row>
           {serviceData.map((item, index) => (
             <Col lg="3" md="4" key={index}>
-              <div className="service-item">
+              <div
+                className="service-item"
+                style={{ background: `${item.bg}` }}
+              >
                 <span>{item.icon}</span>
                 <div>
                   <h3>{item.title}</h3>

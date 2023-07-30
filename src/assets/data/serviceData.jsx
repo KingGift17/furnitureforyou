@@ -25,7 +25,7 @@ const serviceData = [
   {
     icon: <CurrencyExchangeIcon />,
     title: "Money Back Guarantee",
-    subtitle: "Guaranteed between 3-5 working days.",
+    subtitle: "Refunds guaranteed 2-3 working days.",
     bg: "#d6e5fb",
   },
 ];
