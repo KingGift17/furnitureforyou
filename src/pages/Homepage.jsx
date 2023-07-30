@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "../components/Helmet";
+import "../styles/pages/Homepage.scss";
 import { Col, Container, Row } from "reactstrap";
 
 import heroImg from "../assets/images/galaxy-z-flip-feature.png";
