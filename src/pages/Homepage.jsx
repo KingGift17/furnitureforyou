@@ -4,7 +4,7 @@ import "../styles/pages/Homepage.scss";
 import { Col, Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import Services from "../components/Services";
-
+import ProductsList from "../components/ProductsList";
 import heroImg from "../assets/images/galaxy-z-flip-feature.png";
 
 const Homepage = () => {
@@ -48,6 +48,7 @@ const Homepage = () => {
             <Col lg="12" className="text-center">
               <h2 className="section-title">Trending Product</h2>
             </Col>
+            <ProductsList />
           </Row>
         </Container>
       </section>
