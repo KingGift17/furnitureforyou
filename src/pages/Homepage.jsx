@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "../components/Helmet";
 import "../styles/pages/Homepage.scss";
 import { Col, Container, Row } from "reactstrap";
+import { Link } from "react-router-dom";
 
 import heroImg from "../assets/images/galaxy-z-flip-feature.png";
 
@@ -25,7 +26,9 @@ const Homepage = () => {
                   performance, advanced camera capabilities, and enhanced
                   durability, it redefines the future of mobile technology.
                 </p>
-                <button className="buy-btn">BUY NOW</button>
+                <button className="buy-btn">
+                  <Link to="/shop">BUY NOW</Link>
+                </button>
               </div>
             </Col>
 
