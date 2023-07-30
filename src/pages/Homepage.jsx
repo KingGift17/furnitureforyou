@@ -3,6 +3,7 @@ import Helmet from "../components/Helmet";
 import "../styles/pages/Homepage.scss";
 import { Col, Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
+import Services from "../components/Services";
 
 import heroImg from "../assets/images/galaxy-z-flip-feature.png";
 
@@ -40,6 +41,7 @@ const Homepage = () => {
           </Row>
         </Container>
       </section>
+      <Services />
     </Helmet>
   );
 };

@@ -1,26 +1,31 @@
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import RefreshIcon from "@mui/icons-material/Refresh";
+import LockOpenIcon from "@mui/icons-material/LockOpen";
+import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
+
 const serviceData = [
   {
-    icon: "ri-truck-line",
+    icon: <LocalShippingIcon />,
     title: "Free Shipping",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    subtitle: "Guaranteed between 3-5 working days.",
     bg: "#fdefe6",
   },
   {
-    icon: "ri-refresh-line",
+    icon: <RefreshIcon />,
     title: "Easy Returns",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    subtitle: "Contact us by email. Returns take 5-10 working days.",
     bg: "#ceebe9",
   },
   {
-    icon: "ri-secure-payment-line",
+    icon: <LockOpenIcon />,
     title: "Secure Payment",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    subtitle: "Secure Payments powered by Stripe.",
     bg: "#e2f2b2",
   },
   {
-    icon: "ri-exchange-dollar-line",
-    title: " Back Guarantee",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    icon: <CurrencyExchangeIcon />,
+    title: "Money Back Guarantee",
+    subtitle: "Guaranteed between 3-5 working days.",
     bg: "#d6e5fb",
   },
 ];
