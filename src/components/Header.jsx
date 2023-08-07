@@ -6,7 +6,6 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import MenuIcon from "@mui/icons-material/Menu";
 import { motion } from "framer-motion";
-
 import { Container, Row } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
 

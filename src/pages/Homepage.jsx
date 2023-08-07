@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Helmet from "../components/Helmet";
 import "../styles/pages/Homepage.scss";
 import { Col, Container, Row } from "reactstrap";
@@ -6,9 +6,19 @@ import { Link } from "react-router-dom";
 import Services from "../components/Services";
 import ProductsList from "../components/ProductsList";
 import heroImg from "../assets/images/galaxy-z-flip-feature.png";
+import products from "../assets/data/product.jsx";
 
 const Homepage = () => {
+  const [data, setData] = useState(products);
   const year = new Date().getFullYear();
+
+  useEffect(() => {
+    const filteredProducts = products.filter(
+      (item) => item.category == "mobile"
+    );
+
+    setData(filteredProducts);
+  }, []);
 
   return (
     <Helmet title={"Home"}>
@@ -48,7 +58,7 @@ const Homepage = () => {
             <Col lg="12" className="text-center">
               <h2 className="section-title">Trending Product</h2>
             </Col>
-            <ProductsList />
+            <ProductsList data={data} />
           </Row>
         </Container>
       </section>
