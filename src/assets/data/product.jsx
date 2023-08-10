@@ -18,6 +18,7 @@ import productImg15 from "../images/phone-03.png";
 import productImg16 from "../images/phone-04.jpg";
 import productImg17 from "../images/phone-05.jpg";
 import productImg18 from "../images/phone-06.jpg";
+import productImg26 from "../images/galaxy-z-flip4.jpg";
 
 import productImg19 from "../images/watch-01.jpg";
 import productImg20 from "../images/watch-02.jpg";
@@ -117,7 +118,7 @@ const products = [
   },
   {
     id: "04",
-    productName: "Fllufy Sheep Sofa",
+    productName: "Fluffy Sheep Sofa",
     imgUrl: productImg04,
     category: "sofa",
     price: 163,
@@ -163,7 +164,7 @@ const products = [
 
   {
     id: "06",
-    productName: "Fllufy Sheep Sofa",
+    productName: "Fluffy Sheep Sofa",
     imgUrl: productImg06,
     category: "sofa",
     price: 163,
@@ -417,6 +418,29 @@ const products = [
     imgUrl: productImg18,
     category: "mobile",
     price: 699,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+
+  {
+    id: "26",
+    productName: "Samsung Galaxy Z Flip 4",
+    imgUrl: productImg26,
+    category: "mobile",
+    price: 999,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
