@@ -8,6 +8,7 @@ import ProductsList from "../components/UI/ProductsList";
 import heroImg from "../assets/images/galaxy-z-flip-feature.png";
 import products from "../assets/data/product.jsx";
 import counterImg from "../assets/images/counter-timer-img.png";
+import Clock from "../components/UI/Clock";
 
 const Homepage = () => {
   const [trendingProduct, setTrendingProduct] = useState(products);
@@ -21,7 +22,7 @@ const Homepage = () => {
     );
 
     const filteredBestSalesProducts = products.filter(
-      (item) => item.category == "sofa"
+      (item) => item.category == "wireless"
     );
 
     setBestSalesProduct(filteredBestSalesProducts);
@@ -85,7 +86,17 @@ const Homepage = () => {
       <section className="timer-count">
         <Container>
           <Row>
-            <Col lg="6" mb="6"></Col>
+            <Col lg="6" mb="6">
+              <div className="clock__top-content">
+                <h4 className="text-white">Limted Offers</h4>
+                <h3>Quality Armchair</h3>
+              </div>
+              <Clock />
+
+              <button className="buy-btn">
+                <Link to="/shop">Visit Store</Link>
+              </button>
+            </Col>
             <Col lg="6" mb="6" className="text-end">
               <img src={counterImg} alt="" />
             </Col>

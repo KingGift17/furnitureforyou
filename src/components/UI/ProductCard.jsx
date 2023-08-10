@@ -1,6 +1,6 @@
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
-import "../styles/components/ProductCard.scss";
+import "../../styles/components/ProductCard.scss";
 import { Col } from "reactstrap";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";

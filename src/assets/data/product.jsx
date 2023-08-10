@@ -18,7 +18,6 @@ import productImg15 from "../images/phone-03.png";
 import productImg16 from "../images/phone-04.jpg";
 import productImg17 from "../images/phone-05.jpg";
 import productImg18 from "../images/phone-06.jpg";
-import productImg26 from "../images/galaxy-z-flip4.jpg";
 
 import productImg19 from "../images/watch-01.jpg";
 import productImg20 from "../images/watch-02.jpg";
@@ -26,8 +25,12 @@ import productImg21 from "../images/watch-03.jpg";
 import productImg22 from "../images/watch-04.jpg";
 
 import productImg23 from "../images/wireless-01.png";
-
 import productImg25 from "../images/wireless-03.png";
+
+import productImg26 from "../images/galaxy-z-flip4.jpg";
+
+import productImg27 from "../images/anker-iphone-wireless.jpg";
+import productImg28 from "../images/anker-wireless-pad.jpg";
 
 const products = [
   {
@@ -579,6 +582,52 @@ const products = [
     imgUrl: productImg25,
     category: "wireless",
     price: 199,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+
+  {
+    id: "27",
+    productName: "Anker Wireless Charger",
+    imgUrl: productImg27,
+    category: "wireless",
+    price: 45,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+
+  {
+    id: "28",
+    productName: "Anker Wireless Charger",
+    imgUrl: productImg28,
+    category: "wireless",
+    price: 20,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
