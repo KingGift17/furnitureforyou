@@ -13,6 +13,8 @@ import Clock from "../components/UI/Clock";
 const Homepage = () => {
   const [trendingProduct, setTrendingProduct] = useState(products);
   const [bestSalesProduct, setBestSalesProduct] = useState(products);
+  const [newArrivalProduct, setNewArrivalProduct] = useState(products);
+  const [popularProduct, setPopularProduct] = useState(products);
 
   const year = new Date().getFullYear();
 
@@ -24,9 +26,17 @@ const Homepage = () => {
     const filteredBestSalesProducts = products.filter(
       (item) => item.category == "wireless"
     );
+    const filteredNewArrrivalProducts = products.filter(
+      (item) => item.category == "sofa" || item.category == "chair"
+    );
+    const filteredPopularProducts = products.filter(
+      (item) => item.category == "watch"
+    );
 
     setBestSalesProduct(filteredBestSalesProducts);
     setTrendingProduct(filteredTrendingProducts);
+    setNewArrivalProduct(filteredNewArrrivalProducts);
+    setPopularProduct(filteredPopularProducts);
   }, []);
 
   return (
@@ -100,6 +110,28 @@ const Homepage = () => {
             <Col lg="6" mb="6" className="text-end">
               <img src={counterImg} alt="" />
             </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="new-arrival">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center">
+              <h2 className="section-title">New Arrivals</h2>
+            </Col>
+            <ProductsList data={newArrivalProduct} />
+          </Row>
+        </Container>
+      </section>
+
+      <section className="new-arrival">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center">
+              <h2 className="section-title">Popular Products</h2>
+            </Col>
+            <ProductsList data={popularProduct} />
           </Row>
         </Container>
       </section>
