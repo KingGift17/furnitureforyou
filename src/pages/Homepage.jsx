@@ -117,7 +117,7 @@ const Homepage = () => {
       <section className="new-arrival">
         <Container>
           <Row>
-            <Col lg="12" className="text-center">
+            <Col lg="12" className="text-center mb-5">
               <h2 className="section-title">New Arrivals</h2>
             </Col>
             <ProductsList data={newArrivalProduct} />
@@ -128,7 +128,7 @@ const Homepage = () => {
       <section className="new-arrival">
         <Container>
           <Row>
-            <Col lg="12" className="text-center">
+            <Col lg="12" className="text-center mb-5">
               <h2 className="section-title">Popular Products</h2>
             </Col>
             <ProductsList data={popularProduct} />

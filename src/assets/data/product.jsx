@@ -700,7 +700,7 @@ const products = [
     productName: "Samsung Galaxy Watch 5 Pro",
     imgUrl: productImg31,
     category: "watch",
-    price: 270,
+    price: 360,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
