@@ -64,3 +64,13 @@
     }
 }
 
+.store-btn{
+    background-color: #fff;
+    color: var(--primary-color);
+    font-weight: 600;
+
+    &:hover{
+        color: var(--primary-color);
+    }
+}
+
