@@ -12,32 +12,6 @@
 .footer-quicklinks ul il{
         color: #fff;
         background: transparent !important;
-
-        a {
-            position: relative;
-            color: var(--primary-color);
-            font-weight: 500;
-            cursor: pointer;
-            text-decoration: none; /* Remove underline from links */
-        
-            &:before {
-              content: "";
-              position: absolute;
-              bottom: -10px;
-              left: 0;
-              width: 100%;
-              height: 2px;
-              background-color: var(--primary-color);
-              transform: scaleX(0);
-              transform-origin: left;
-              transition: transform 0.3s ease-in-out;
-            }
-        
-            &:hover:before {
-              padding-bottom: 5%;
-              transform: scaleX(1);
-            }
-          }
     
 }
 
