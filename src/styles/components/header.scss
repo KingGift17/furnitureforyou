@@ -35,7 +35,7 @@
     align-items: center;
     column-gap: 2.7rem;
     margin-bottom: 0;
-  
+ 
     .nav-item a {
       position: relative;
       color: var(--primary-color);
@@ -138,6 +138,7 @@
       background: #00000070;
       z-index: 999;
       display: none;
+      
     }
 
     .menu{
@@ -154,7 +155,7 @@
     }
 
     .nav-active{
-      display: block;
+      display: block; 
     }
 
     .mobile-menu{
