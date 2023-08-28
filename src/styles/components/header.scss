@@ -114,4 +114,59 @@
   .nav-active {
     font-weight: 700 !important;
   }
+
+  .sticky-header{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 3px 3px 8px -3px #ddd;
+    background: #fff; 
+  }
+
+  @media only screen and (max-width: 768px) {
+    .navbar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--hero-bg);
+      z-index: 999;
+      display: none;
+    }
+
+    .menu{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      background: #fff;
+      z-index: 9991;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-active{
+      display: block;
+    }
+
+    .mobile-menu{
+      display: block;
+    }
+
+    .logo h1{
+      font-size: 1rem;
+    }
+
+    .logo img{
+      width: 30px;
+      height: 30px;
+    }
+  }
   
