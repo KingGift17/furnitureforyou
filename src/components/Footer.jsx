@@ -22,28 +22,30 @@ function Footer() {
               </div>
             </div>
             <p className="footer-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-              dolorem consequuntur eum quam qui delectus quae sed, consequatur
-              natus quos.
+              Welcome to GiftKart! Discover the latest in tech innovation. From
+              smartphones and laptops to smart home devices, find the perfect
+              tech products to enhance your digital lifestyle. Enjoy seamless
+              shopping, fast shipping, and a world of possibilities at GiftKart.
+              Elevate your tech game today!
             </p>
           </Col>
           <Col lg="3">
             <div className="footer-quicklinks">
               <h4 className="quicklinks-title">Top Categories</h4>
               <ListGroup>
-                <ListGroupItem className="ps-0 border-0">
+                <ListGroupItem>
                   <Link to="#">Mobile Phones</Link>
                 </ListGroupItem>
 
-                <ListGroupItem className="ps-0 border-0">
+                <ListGroupItem>
                   <Link to="#">Modern Sofas</Link>
                 </ListGroupItem>
 
-                <ListGroupItem className="ps-0 border-0">
+                <ListGroupItem>
                   <Link to="#">Arm Chair</Link>
                 </ListGroupItem>
 
-                <ListGroupItem className="ps-0 border-0">
+                <ListGroupItem>
                   <Link to="#">Watches</Link>
                 </ListGroupItem>
               </ListGroup>
@@ -74,7 +76,8 @@ function Footer() {
           <Col lg="3">
             <div className="footer-quicklinks">
               <h4 className="quicklinks-title">Contact</h4>
-              <ListGroup>
+
+              <ListGroup className="footer-contact">
                 <ListGroupItem className="ps-0 border-0">
                   <PlaceIcon />
                   <p>123 Unversity Road, Leicester LE1 2AB</p>
@@ -110,7 +113,7 @@ function Footer() {
           </Col>
 
           <Col lg="12">
-            <p className="footer_copyright">
+            <p className="footer-copyright">
               Copyright &copy;{year} developed by Ovie G Bazunu. All rights
               reserved.
             </p>
