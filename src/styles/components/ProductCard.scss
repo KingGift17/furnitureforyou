@@ -47,3 +47,25 @@
 
 }
 
+@media only screen and (max-width: 992px) {
+    .product-info{
+        h3 a{
+            font-size: 1.1rem;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .product-info{
+        h3 a{
+            font-size: 1rem;
+        }
+    }
+    .product-card-bottom{
+        span{
+            font-size: 1rem;
+        }
+    }
+    
+}

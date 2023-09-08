@@ -1,0 +1,40 @@
+.clock-wrapper{
+    gap: 2rem;
+    align-items: center;
+    display: flex;
+}
+
+.clock-data{
+    gap: 1rem;
+    align-items: center;
+    display: flex;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .clock-wrapper{
+        justify-content: center;
+    }
+    .clock-data h1{
+        font-size: 1.1rem !important;
+    }
+
+    .clock-data h5{
+        font-size: 0.9rem !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .clock-wrapper{
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    .clock-data h1{
+        font-size: 1.1rem !important;
+    }
+
+    .clock-data h5{
+        font-size: 0.9rem !important;
+    }
+}
+

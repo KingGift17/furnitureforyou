@@ -15,7 +15,7 @@ function Footer() {
     <footer className="footer">
       <Container>
         <Row>
-          <Col lg="4">
+          <Col lg="4" className="mb-4" md="6">
             <div className="logo">
               <div>
                 <h1 className="text-white">GiftKart</h1>
@@ -29,7 +29,7 @@ function Footer() {
               Elevate your tech game today!
             </p>
           </Col>
-          <Col lg="3">
+          <Col lg="3" md="3" className="mb-4">
             <div className="footer-quicklinks">
               <h4 className="quicklinks-title">Top Categories</h4>
               <ListGroup>
@@ -51,7 +51,7 @@ function Footer() {
               </ListGroup>
             </div>
           </Col>
-          <Col lg="2">
+          <Col lg="2" md="3" className="mb-4">
             <div className="footer-quicklinks">
               <h4 className="quicklinks-title">Useful Links</h4>
               <ListGroup>
@@ -73,7 +73,7 @@ function Footer() {
               </ListGroup>
             </div>
           </Col>
-          <Col lg="3">
+          <Col lg="3" className="mb-4">
             <div className="footer-quicklinks">
               <h4 className="quicklinks-title">Contact</h4>
 
