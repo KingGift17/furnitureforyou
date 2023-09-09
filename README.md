@@ -3,7 +3,8 @@
 @vite
 @react
 @reactstrap
-@redux
+@react-redux
+@reduxjs/toolkit
 @sass
 @mui/icons-material
 @mui/material
