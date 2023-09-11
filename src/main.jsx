@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           closeOnClick={false}
           pauseOnHover={false}
           pauseOnFocusLoss={false}
-          theme="colored"
+          theme="dark"
         />
         <App />
       </Provider>

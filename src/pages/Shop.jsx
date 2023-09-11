@@ -39,7 +39,6 @@ const Shop = () => {
             <Col lg="6" md="6">
               <div className="search-box">
                 <SearchIcon />
-
                 <input type="text" placeholder="Search" />
               </div>
             </Col>
