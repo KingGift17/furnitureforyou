@@ -8,6 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { motion } from "framer-motion";
 import { Container, Row } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 const navLink = [
   {
@@ -26,6 +27,7 @@ const navLink = [
 
 const Header = () => {
   const headerRef = useRef(null);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
   const menuRef = useRef(null);
 
@@ -86,7 +88,7 @@ const Header = () => {
               <motion.span whileTap={{ rotate: 15 }}>
                 <span className="cart-icon">
                   <ShoppingBasketIcon />
-                  <div className="badgeCounter">1</div>
+                  <div className="badgeCounter">{totalQuantity}</div>
                 </span>
               </motion.span>
               <span>
