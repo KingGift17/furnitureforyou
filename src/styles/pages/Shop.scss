@@ -19,11 +19,28 @@
     }
 }
 
-.search-box{
+.search-box {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    
-}
+    border: 1px solid var(--primary-color);
+    background-color: #f0f1ed;
+    border-radius: 4px;
+  
+    input {
+      flex-grow: 1; // This will make the input expand to fill available space
+      border: none;
+      outline: none;
+      padding: 10px 10px;
+      background-color: #f0f1ed;
+      color: var(--primary-color);
+      font-weight: 400;
+    }
+  
+    svg {
+      margin-left: 10px; // Add some spacing between input and icon
+      cursor: pointer;
+      color: var(--primary-color);
+    }
+  }
