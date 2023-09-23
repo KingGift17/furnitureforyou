@@ -1,0 +1,39 @@
+.product-details{
+    margin-top: 50px;
+
+    h2{
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+}
+
+.product-rating{
+    .icons{
+        color: coral;
+    }
+
+    p {
+        padding-top: 15px;
+
+
+        span{
+            color: coral;
+            font-weight: 500;
+        }
+    }
+}
+
+.product-price{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.tab-wrapper{
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.active-tab{
+    font-weight: 600;
+}

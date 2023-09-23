@@ -28,7 +28,9 @@ const ProductCard = ({ item }) => {
     <Col lg="3" md="4" className="mb-2">
       <div className="product-item">
         <div className="product-img">
-          <img src={item.imgUrl} alt="" />
+          <Link to={`/shop/${item.id}`}>
+            <img src={item.imgUrl} alt="" />
+          </Link>
         </div>
         <div className="p-2 product-info">
           <h3 className="product-name">
