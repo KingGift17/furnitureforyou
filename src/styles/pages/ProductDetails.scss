@@ -32,8 +32,26 @@
     color: var(--primary-color);
     font-weight: 500;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .active-tab{
+    font-weight: 700;
+}
+
+.tab-content{
+    p{
+        line-height: 30px;
+    }
+}
+
+.review-wrapper ul li{
+    span{
+    color: coral;
     font-weight: 600;
+    }
+    
+    p{
+        margin-top: 10px;
+    }
 }

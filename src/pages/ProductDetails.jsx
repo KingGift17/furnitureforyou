@@ -85,7 +85,18 @@ const ProductDetails = () => {
                   <p>{description}</p>
                 </div>
               ) : (
-                <div>reviews</div>
+                <div className="product-review">
+                  <div className="review-wrapper">
+                    <ul>
+                      {reviews.map((item, index) => (
+                        <li key={index}>
+                          <span>{item.rating} Rating</span>
+                          <p>{item.text}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               )}
             </Col>
           </Row>
