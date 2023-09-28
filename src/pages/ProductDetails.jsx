@@ -12,6 +12,8 @@ import { motion } from "framer-motion";
 const ProductDetails = () => {
   const [tab, setTab] = useState("desc");
   const { id } = useParams();
+  const [rating, setRating] = useState(null);
+  const [hover, setHover] = useState(null);
   const product = products.find((item) => item.id === id);
 
   const {
@@ -88,13 +90,57 @@ const ProductDetails = () => {
                 <div className="product-review">
                   <div className="review-wrapper">
                     <ul>
-                      {reviews.map((item, index) => (
-                        <li key={index}>
+                      {reviews?.map((item, index) => (
+                        <li key={index} className="mb-4">
+                          <h6>Anonymous User </h6>
                           <span>{item.rating} Rating</span>
                           <p>{item.text}</p>
                         </li>
                       ))}
                     </ul>
+
+                    <div className="review-form">
+                      <h4>Leave your experience</h4>
+                      <form action="">
+                        <div className="form-group">
+                          <input type="text" placeholder="Enter name: " />
+                        </div>
+
+                        <div className="form-group">
+                          {[...Array(5)].map((star, index) => {
+                            const currentRating = index + 1;
+
+                            return (
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rating"
+                                  value={currentRating}
+                                  onClick={() => setRating(currentRating)}
+                                />
+                                <StarIcon
+                                  className="star"
+                                  color={
+                                    currentRating <= (hover || rating)
+                                      ? "#ff7f50"
+                                      : "#000"
+                                  }
+                                  onMouseEnter={() => setHover(currentRating)}
+                                  onMouseLeave={() => setHover(null)}
+                                />
+                              </label>
+                            );
+                          })}
+                        </div>
+                        <div className="form-group">
+                          <textarea
+                            rows={5}
+                            type="text"
+                            placeholder="Review Message... "
+                          />
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
               )}
