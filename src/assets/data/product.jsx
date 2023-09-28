@@ -102,7 +102,7 @@ const products = [
     avgRating: 4.7,
   },
   {
-    id: "26",
+    id: "03",
     productName: "Rivet Bigelow Modern ",
     imgUrl: productImg02,
     category: "sofa",
@@ -215,7 +215,7 @@ const products = [
   },
 
   {
-    id: "27",
+    id: "007",
     productName: "Modern Arm Sofa",
     imgUrl: productImg007,
     category: "sofa",
@@ -306,7 +306,7 @@ const products = [
     avgRating: 4.8,
   },
   {
-    id: "25",
+    id: "10",
     productName: "Sakarias Armchair",
     imgUrl: productImg10,
     category: "chair",
@@ -696,7 +696,7 @@ const products = [
   },
 
   {
-    id: "30",
+    id: "31",
     productName: "Samsung Galaxy Watch 5 Pro",
     imgUrl: productImg31,
     category: "watch",

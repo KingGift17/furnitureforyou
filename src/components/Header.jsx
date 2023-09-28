@@ -59,7 +59,9 @@ const Header = () => {
             <div className="logo">
               <img src={logo} />
               <div>
-                <h1>GiftKart</h1>
+                <a to="/">
+                  <h1>GiftKart</h1>
+                </a>
               </div>
             </div>
 
