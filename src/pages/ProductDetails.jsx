@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import products from "../assets/data/product";
 import Helmet from "../components/Helmet";
 import CommonSection from "../components/UI/CommonSection";
@@ -46,6 +46,15 @@ const ProductDetails = () => {
 
     const reviewUserName = reviewUser.current.value;
     const reviewUserMsg = reviewMsg.current.value;
+
+    const reviewObj = {
+      userName: reviewUserName,
+      text: reviewUserMsg,
+      rating,
+    };
+
+    console.log(reviewObj);
+    toast.success("Review Submitted Successfully");
   };
 
   const addToCart = () => {
@@ -57,7 +66,13 @@ const ProductDetails = () => {
         price,
       })
     );
+
+    toast.success("Product added successfully");
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 10);
+  }, [product]);
 
   return (
     <Helmet title={productName}>
@@ -152,9 +167,16 @@ const ProductDetails = () => {
                         <div className="form-group">
                           {[...Array(5)].map((star, index) => {
                             const currentRating = index + 1;
+                            const starClasses = ["star"];
+                            if (currentRating <= (hover || rating)) {
+                              starClasses.push("highlighted");
+                            }
 
                             return (
-                              <label key={index}>
+                              <motion.label
+                                whileTap={{ scale: 1.2 }}
+                                key={index}
+                              >
                                 <input
                                   type="radio"
                                   name="rating"
@@ -162,16 +184,11 @@ const ProductDetails = () => {
                                   onClick={() => handleStarClick(currentRating)}
                                 />
                                 <StarIcon
-                                  className="star"
-                                  color={
-                                    currentRating <= (hover || rating)
-                                      ? "#ff7f50"
-                                      : "#000"
-                                  }
+                                  className={starClasses.join(" ")}
                                   onMouseEnter={() => setHover(currentRating)}
                                   onMouseLeave={() => setHover(null)}
                                 />
-                              </label>
+                              </motion.label>
                             );
                           })}
                         </div>
