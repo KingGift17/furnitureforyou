@@ -71,7 +71,7 @@
 }
 
 .form-group{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     input, textarea{
         width: 100%;
@@ -87,6 +87,7 @@
 
     .star{
         cursor: pointer;
+        color: coral
     }
 }
 
@@ -94,4 +95,8 @@
     font-size: 1.2rem;
     font-weight: 600;
     margin-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    
 }
