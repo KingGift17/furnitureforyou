@@ -12,22 +12,26 @@ const Checkout = () => {
         <Container>
           <Row>
             <Col lg="8">
-              <h6 className="mb-4 fw-bold">Billing Information</h6>
+              <h5 className="mb-4 fw-bold">Billing Information</h5>
               <Form className="billing-form">
+                <h6>Full Name*</h6>
                 <FormGroup className="form-group">
                   <input type="text" placeholder="Enter your name" />
                 </FormGroup>
 
+                <h6>Email*</h6>
                 <FormGroup className="form-group">
                   <input type="email" placeholder="Enter your email" />
                 </FormGroup>
 
+                <h6>Phone Number*</h6>
                 <FormGroup className="form-group">
                   <input type="number" placeholder="Phone number" />
                 </FormGroup>
 
+                <h6>Address</h6>
                 <FormGroup className="form-group">
-                  <input type="text" placeholder="Street address" />
+                  <input type="text" placeholder="Street address*" />
                 </FormGroup>
 
                 <FormGroup className="form-group">
@@ -35,7 +39,7 @@ const Checkout = () => {
                 </FormGroup>
 
                 <FormGroup className="form-group">
-                  <input type="text" placeholder="PostCode" />
+                  <input type="text" placeholder="Postcode*" />
                 </FormGroup>
 
                 <FormGroup className="form-group">
