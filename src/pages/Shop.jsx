@@ -40,6 +40,8 @@ const Shop = () => {
     }
   };
 
+  const [sortBy, setSortBy] = useState("default");
+
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
 
@@ -71,12 +73,12 @@ const Shop = () => {
             </Col>
             <Col lg="3" md="6">
               <div className="filter-widget">
-                <select>
-                  <option>Sort By</option>
+                <select onChange={(e) => setSortBy(e.target.value)}>
+                  <option value="default">Sort By</option>
                   <option value="ascending">A-Z</option>
                   <option value="descending">Z-A</option>
-                  <option value="high">$High-Low</option>
-                  <option value="low">$Low-High</option>
+                  <option value="high">£High-Low</option>
+                  <option value="low">£Low-High</option>
                 </select>
               </div>
             </Col>
