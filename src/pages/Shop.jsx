@@ -75,8 +75,8 @@ const Shop = () => {
                   <option value="default">Sort By</option>
                   <option value="ascending">A-Z</option>
                   <option value="descending">Z-A</option>
-                  <option value="high">£High-Low</option>
-                  <option value="low">£Low-High</option>
+                  <option value="high">£ High-Low</option>
+                  <option value="low">£ Low-High</option>
                 </select>
               </div>
             </Col>

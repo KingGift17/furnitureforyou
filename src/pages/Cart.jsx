@@ -46,9 +46,9 @@ const Cart = () => {
                 <h6 className="d-flex align-items-center justify-content-between">
                   Subtotal
                 </h6>
-                <span className="fs-4 fw-bold">£{totalAmount}</span>
+                <span className="fs-4 fw-bold">£{totalAmount}.00</span>
               </div>
-              <p className="fs-6 mt-2">Taxes and Vax exc.</p>
+              <p className="fs-6 mt-2">Taxes and Vax inc.</p>
               <div>
                 <button className="checkout-btn">
                   <Link to="/checkout">Checkout</Link>
