@@ -50,10 +50,10 @@ const Cart = () => {
               </div>
               <p className="fs-6 mt-2">Taxes and Vax inc.</p>
               <div>
-                <button className="checkout-btn">
+                <button className="cart-btn">
                   <Link to="/checkout">Checkout</Link>
                 </button>
-                <button className="checkout-btn">
+                <button className="cart-btn">
                   <Link to="/shop">Continue Shopping</Link>
                 </button>
               </div>
