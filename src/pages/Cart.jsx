@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/pages/Cart.scss";
 import Helmet from "../components/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import { Container, Row, Col } from "reactstrap";
-import tdImg from "../assets/images/arm-chair-01.jpg";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { motion } from "framer-motion";
 import { cartActions } from "../redux/slices/CartSlices";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
+
   return (
     <Helmet title="Cart">
       <CommonSection title="Shopping Cart" />
@@ -32,17 +32,9 @@ const Cart = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>
-                        <img src={tdImg} alt="" />
-                      </td>
-                      <td>Modern Arm Chair</td>
-                      <td>£300</td>
-                      <td>2p</td>
-                      <td>
-                        <DeleteIcon />
-                      </td>
-                    </tr>
+                    {cartItems.map((item, index) => (
+                      <Tr item={item} key={index} />
+                    ))}
                   </tbody>
                 </table>
               )}
@@ -52,6 +44,35 @@ const Cart = () => {
         </Container>
       </section>
     </Helmet>
+  );
+};
+
+const Tr = ({ item }) => {
+  const dispatch = useDispatch();
+
+  const deleteProduct = () => {
+    dispatch(cartActions.deleteItem(item.id));
+  };
+  return (
+    <tr>
+      <td>
+        <img src={item.imgUrl} alt="" />
+      </td>
+      <td>{item.productName}</td>
+      <td>£ {item.price}</td>
+      <td>{item.quantity}</td>
+      <td>
+        <motion.span
+          whileHover={{
+            color: "red",
+            transition: { duration: 1 },
+          }}
+          onClick={deleteProduct}
+        >
+          <DeleteIcon />
+        </motion.span>
+      </td>
+    </tr>
   );
 };
 
