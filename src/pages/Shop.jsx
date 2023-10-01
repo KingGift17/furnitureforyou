@@ -40,8 +40,6 @@ const Shop = () => {
     }
   };
 
-  const [sortBy, setSortBy] = useState("default");
-
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
 

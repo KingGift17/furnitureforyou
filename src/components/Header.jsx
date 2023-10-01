@@ -7,7 +7,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import MenuIcon from "@mui/icons-material/Menu";
 import { motion } from "framer-motion";
 import { Container, Row } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 
 const navLink = [
@@ -30,6 +30,7 @@ const Header = () => {
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
   const menuRef = useRef(null);
+  const navigate = useNavigate();
 
   const stickyHeaderFunc = () => {
     window.addEventListener("scroll", () => {
@@ -49,6 +50,10 @@ const Header = () => {
 
     return () => window.removeEventListener("scroll", stickyHeaderFunc);
   });
+
+  const navigateToCart = () => {
+    navigate("/cart");
+  };
 
   const menuToggle = () => menuRef.current.classList.toggle("nav-active");
   return (
@@ -88,7 +93,7 @@ const Header = () => {
                 <div className="badgeCounter">1</div>
               </span>
               <motion.span whileTap={{ rotate: 15 }}>
-                <span className="cart-icon">
+                <span className="cart-icon" onClick={navigateToCart}>
                   <ShoppingBasketIcon />
                   <div className="badgeCounter">{totalQuantity}</div>
                 </span>
