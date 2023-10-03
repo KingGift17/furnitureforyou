@@ -2,8 +2,14 @@ import React, { useState } from "react";
 import Helmet from "../components/Helmet";
 import { Container, Row, Col, Form, FormGroup } from "reactstrap";
 import { Link } from "react-router-dom";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { setDoc, doc } from "firebase/firestore";
+
 import { auth } from "../firebase.config.js";
+import { storage } from "../firebase.config.js";
+import { db } from "../firebase.config.js";
+import { toast } from "react-toastify";
 
 import "../styles/pages/Login.scss";
 
@@ -23,10 +29,29 @@ const Register = () => {
         email,
         password
       );
-
       const user = userCredential.user;
+      const storageRef = ref(storage, `images/${Date.now() + username}`);
+      const uploadTask = uploadBytesResumable(storageRef, file);
+
+      uploadTask.on(
+        () => {
+          toast.error(error.message);
+        },
+        () => {
+          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadUrl) => {
+            //Used to update a users profile
+            await updateProfile(user, {
+              displayName: username,
+              photoURL: downloadUrl,
+            });
+          });
+        }
+      );
+
       console.log(user);
-    } catch (error) {}
+    } catch (error) {
+      toast.error("Something went wrong");
+    }
   };
 
   return (
