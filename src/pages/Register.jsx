@@ -3,7 +3,7 @@ import Helmet from "../components/Helmet";
 import { Container, Row, Col, Form, FormGroup } from "reactstrap";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase.config";
+import { auth } from "../firebase.config.js";
 
 import "../styles/pages/Login.scss";
 
