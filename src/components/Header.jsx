@@ -90,7 +90,7 @@ const Header = () => {
             <div className="nav-icons">
               <span className="fav-icon">
                 <FavoriteIcon />
-                <div className="badgeCounter">1</div>
+                <div className="badgeCounter">2</div>
               </span>
               <motion.span whileTap={{ rotate: 15 }}>
                 <span className="cart-icon" onClick={navigateToCart}>
