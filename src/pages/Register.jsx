@@ -15,9 +15,9 @@ import { useNavigate } from "react-router-dom";
 import "../styles/pages/Login.scss";
 
 const Register = () => {
-  const [username, setUsername] = useState(" ");
-  const [email, setEmail] = useState(" ");
-  const [password, setPassword] = useState(" ");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
 

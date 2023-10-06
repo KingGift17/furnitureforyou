@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { Container, Row } from "reactstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
+import useAuth from "../custom-hooks/useAuth";
 
 const navLink = [
   {
@@ -28,9 +29,11 @@ const navLink = [
 const Header = () => {
   const headerRef = useRef(null);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const profileActionRef = useRef(null);
 
   const menuRef = useRef(null);
   const navigate = useNavigate();
+  const { currentUser } = useAuth();
 
   const stickyHeaderFunc = () => {
     window.addEventListener("scroll", () => {
@@ -54,6 +57,9 @@ const Header = () => {
   const navigateToCart = () => {
     navigate("/cart");
   };
+
+  const toggleProfileActions = () =>
+    profileActionRef.current.classList.toggle("show-profileActions");
 
   const menuToggle = () => menuRef.current.classList.toggle("nav-active");
   return (
@@ -98,13 +104,30 @@ const Header = () => {
                   <div className="badgeCounter">{totalQuantity}</div>
                 </span>
               </motion.span>
-              <span>
+
+              <div className="profile">
                 <motion.img
                   whileTap={{ scale: 1.2 }}
-                  src={userIcon}
-                  alt="image"
+                  src={currentUser ? currentUser.photoURL : userIcon}
+                  alt=""
+                  onClick={toggleProfileActions}
                 />
-              </span>
+
+                <div
+                  className="profile-actions"
+                  ref={profileActionRef}
+                  onClick={toggleProfileActions}
+                >
+                  {currentUser ? (
+                    <span>Logout</span>
+                  ) : (
+                    <div>
+                      <Link to="/login">Login</Link>
+                      <Link to="/register">Register</Link>
+                    </div>
+                  )}
+                </div>
+              </div>
               <div className="mobile-menu">
                 <span onClick={menuToggle}>
                   <MenuIcon />
