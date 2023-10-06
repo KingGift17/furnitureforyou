@@ -15,6 +15,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import ProtectedRoutes from "./routers/ProtectedRoutes";
 
 function App() {
   return (
@@ -25,7 +26,14 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/home" element={<Homepage />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedRoutes>
+                <Checkout />
+              </ProtectedRoutes>
+            }
+          />
           <Route path="/shop/:id" element={<ProductDetails />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/register" element={<Register />} />
