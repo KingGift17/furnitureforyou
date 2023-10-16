@@ -15,6 +15,15 @@
 
 <!-- ABOUT THE PROJECT -->
 
+  <img src='src/assets/githubImages/Homepage.png' width='100%'>
+
+## Additional Images
+
+  <p align='center'>
+    <img src='/src/assets/githubImages/homepage_2.png' width='32%'>
+    <img src='/src/assets/githubImages/Checkout-page.png' width='32%'>
+    <img src='/src/assets/githubImages/register.png' width='32%'>
+  </p>
 
 @vite
 @react
