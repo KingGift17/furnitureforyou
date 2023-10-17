@@ -10,6 +10,8 @@ import { Container, Row } from "reactstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import useAuth from "../custom-hooks/useAuth";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase.config";
 
 const navLink = [
   {
@@ -46,6 +48,17 @@ const Header = () => {
         headerRef.current.classList.remove("sticky-header");
       }
     });
+  };
+
+  const logout = () => {
+    signOut(auth)
+      .then(() => {
+        toast.sucess("Logged Out");
+        navigate("/home");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
   };
 
   useEffect(() => {
@@ -96,7 +109,7 @@ const Header = () => {
             <div className="nav-icons">
               <span className="fav-icon">
                 <FavoriteIcon />
-                <div className="badgeCounter">2</div>
+                <div className="badgeCounter">1</div>
               </span>
               <motion.span whileTap={{ rotate: 15 }}>
                 <span className="cart-icon" onClick={navigateToCart}>
@@ -119,9 +132,14 @@ const Header = () => {
                   onClick={toggleProfileActions}
                 >
                   {currentUser ? (
-                    <span>Logout</span>
+                    <span
+                      className="d-flex align-items-center justify-content-center flex-column"
+                      onClick={logout}
+                    >
+                      Logout
+                    </span>
                   ) : (
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <Link to="/login">Login</Link>
                       <Link to="/register">Register</Link>
                     </div>
